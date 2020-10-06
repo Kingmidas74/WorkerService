@@ -1,0 +1,10 @@
+﻿{
+  "profiles": {
+    "worker_scheduler": {
+      "commandName": "Project",
+      "environmentVariables": {
+        "DOTNET_ENVIRONMENT": "Development"
+      }
+    }
+  }
+}
