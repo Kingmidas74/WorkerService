@@ -28,6 +28,8 @@ namespace WorkerScheduler
                 try {
                     await _workerService.NotifySubscribers();                    
                 }
+                catch(TaskCanceledException) {                    
+                }
                 catch(Exception e)
                 {
                     _logger.LogError(e,e.Message);

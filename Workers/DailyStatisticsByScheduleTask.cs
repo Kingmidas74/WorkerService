@@ -27,6 +27,8 @@ namespace WorkerScheduler
                 try {
                     await _workerService.CollectDailyStatistics();                    
                 }
+                catch(TaskCanceledException) {                    
+                }
                 catch(Exception e)
                 {
                     _logger.LogError(e,e.Message);

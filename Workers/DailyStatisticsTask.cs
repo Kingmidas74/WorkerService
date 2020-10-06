@@ -40,6 +40,8 @@ namespace WorkerScheduler
                         await Task.Delay(1000, stoppingToken);
                     }    
                 }
+                catch(TaskCanceledException) {
+                }
                 catch(Exception e)
                 {
                     _logger.LogError(e,e.Message);
